@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    {{ form_start(form) }}
+
+    {{ form_errors(form) }}
+
+    {{ form_rest(form) }}
+
+
+        <div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>
+
+    {{ form_end(form) }}
+
+
+
+
+{% endblock body %}

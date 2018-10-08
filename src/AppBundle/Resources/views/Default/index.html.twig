@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <h1>Promotions</h1>
+
+    {% for promotion in promotions %}
+        <li>
+            <a href="{{ path('show_shop', {'id': promotion.shop.id}) }}">
+                {{ promotion.displayName }}
+            </a>
+        </li>
+    {% endfor %}
+
+    <a href="{{ path('post_promotion') }}" class="btn btn-primary">Publier une promotion</a>
+
+{% endblock body %}

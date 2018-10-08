@@ -1,0 +1,21 @@
+services:
+    admin.admin.promotion:
+        class: AdminBundle\Admin\PromotionAdmin
+        arguments: [~, AppBundle\Entity\Promotion, AdminBundle:PromotionAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Promotion }
+        public: true
+
+    admin.admin.shop:
+        class: AdminBundle\Admin\ShopAdmin
+        arguments: [~, AppBundle\Entity\Shop, AdminBundle:ShopAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Shop }
+        public: true
+
+    admin.admin.sponsor:
+        class: AdminBundle\Admin\SponsorAdmin
+        arguments: [~, AppBundle\Entity\Sponsor, AdminBundle:SponsorAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Sponsor }
+        public: true

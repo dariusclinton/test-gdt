@@ -1,0 +1,9 @@
+services:
+#    admin.example:
+#        class: AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    admin.user_admin_listener:
+        class: AdminBundle\Listener\AdminUserListener
+        arguments: ["@service_container"]  #arguments: ["@security.password_encoder"]
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }

@@ -1,0 +1,5 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+    {{ constant('AppBundle\\Entity\\Promotion::TYPE_PROMOTION')[object.type] }}
+{% endblock %}
